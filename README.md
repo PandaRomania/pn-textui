@@ -27,11 +27,11 @@ to
 
 ```lua
 RegisterNetEvent('qb-core:client:DrawText', function(key, text)
-    exports['TextUI']:Show(key, text)
+    exports['pn-textui']:Show(key, text)
 end)
 
 RegisterNetEvent('qb-core:client:HideText', function()
-   exports['TextUI']:Hide()
+   exports['pn-textui']:Hide()
 end)
 ```
 
@@ -61,16 +61,16 @@ to
 
 ```lua
 function ESX.TextUI(key, text)
-    if GetResourceState("TextUI") ~= "missing" then
-        return exports['TextUI']:Show(key, text)
+    if GetResourceState("pn-textui") ~= "missing" then
+        return exports['pn-textui']:Show(key, text)
     end
 
     print("[^1ERROR^7] ^5ESX TextUI^7 is Missing!")
 end
 
 function ESX.HideUI()
-    if GetResourceState("TextUI") ~= "missing" then
-        return exports['TextUI']:Hide()
+    if GetResourceState("pn-textui") ~= "missing" then
+        return exports['pn-textui']:Hide()
     end
 
     print("[^1ERROR^7] ^5ESX TextUI^7 is Missing!")
